@@ -2,16 +2,263 @@
 <html class="mdc-typography">
   <head>
     <title>SuperAdmin</title>
+        <style>
+    /* Ensure layout covers the entire screen. */
+    html {
+      height: 100%;
+    }
+
+    /* Stack toolbar and content on top of each other. */
+    body {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      height: 100%;
+      font-family: 'Roboto'
+    }
+    .mdc-typography--body2{
+      line-height: 3.5rem!important;
+      padding-left: 16px;
+    }
+    .mdc-typography--body2 :first-child{
+      font-weight: bold;
+      font-size: 33px;
+    }
+    /* Place drawer and main next to each other. */
+    .content {
+      display: flex;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    /* A quick and simple toolbar, while we're waiting for mdc-toolbar. */
+    .toolbar {
+      display: block;
+      width: 100%;
+      height: 56px;
+      line-height: 56px;
+      padding: 0 16px;
+      box-sizing: border-box;
+      /* Place drawer under toolbar shadow. */
+      z-index: 2;
+    }
+    @media (min-width: 600px) {
+      .toolbar {
+        height: 64px;
+        line-height: 64px;
+      }
+    }
+
+    .main {
+      padding-left: 16px;
+    }
+
+    </style>
     <link rel="stylesheet"
-          href="node_modules/material-components-web/dist/material-components-web.css">
+          href="node_modules/material-components-web/dist/material-components-web.min.css">
+             <link rel="stylesheet"
+          href="static/css/font.css">
+              <link rel="stylesheet"
+          href="static/css/layout.css"> 
   </head>
-  <body>
-    <h2 class="mdc-typography--display2">Hello, Material Components!</h2>
-    <div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
-      <input type="text" class="mdc-textfield__input" id="demo-input">
-      <label for="demo-input" class="mdc-textfield__label">Tell us how you feel!</label>
+
+  <body class="mdc-typography ">
+<!--https://github.com/material-components/material-components-web/tree/master/packages/mdc-theme-->
+<div class="mdc-theme--accent-bg mdc-typography mdc-typography--body2">
+  <span class="mdc-theme--text-primary-on-accent">SuperAdmin</span>
+  <span class="mdc-theme--text-secondary-on-accent">统计数据</span>
+  <span class="mdc-theme--text-hint-on-accent">接口管理</span>
+  <span class="mdc-theme--text-disabled-on-accent">服务管理</span>
+  <span class="mdc-theme--text-icon-on-accent">配置管理</span>
+  <span class="mdc-theme--text-icon-on-accent ">配置管理</span>
+  <span class="mdc-theme--text-icon-on-accent">配置管理</span>
+</div>
+    <div class="content">
+      
+      <nav class="mdc-permanent-drawer">
+
+        <div class="mdc-list-group">
+          <nav class="mdc-list">
+            <a class="mdc-list-item mdc-permanent-drawer--selected" href="#">
+              <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">inbox</i>Inbox
+            </a>
+            <a class="mdc-list-item" href="#">
+              <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">star</i>Star
+            </a>
+            <a class="mdc-list-item" href="#">
+              <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">send</i>Sent Mail
+            </a>
+            <a class="mdc-list-item" href="#">
+              <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">drafts</i>Drafts
+            </a>
+          </nav>
+
+          <hr class="mdc-list-divider">
+
+          <nav class="mdc-list">
+            <a class="mdc-list-item" href="#">
+              <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">email</i>All Mail
+            </a>
+            <a class="mdc-list-item" href="#">
+              <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">delete</i>Trash
+            </a>
+            <a class="mdc-list-item" href="#">
+              <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">report</i>Spam
+            </a>
+          </nav>
+        </div>
+      </nav>
+      <main class="main">
+                <div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+<p class="mdc-typography--body1 mdc-typography--adjust-margin">2016年的美剧可谓精彩纷呈，HBO、Netflix等推出了《权力的游戏》《硅谷》《西部世界》这样口碑收视俱佳原创剧，亚马逊、FX、AMC以及其他传统主流电视网也推出各类精彩剧集以馈观众。IMDb近日评选出了网站2016年度最受欢迎十大剧集，榜单主要基于观众在IMDb剧集网页的浏览量统计。</p>
+          <p class="mdc-typography--body1 mdc-typography--adjust-margin">Body 1 paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+          in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p class="mdc-typography--body1 mdc-typography--adjust-margin">Body 1 paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+          in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p class="mdc-typography--body1 mdc-typography--adjust-margin">Body 1 paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+          in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p class="mdc-typography--body1 mdc-typography--adjust-margin">Body 1 paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+          in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p class="mdc-typography--body1 mdc-typography--adjust-margin">Body 1 paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+          in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
     </div>
-    <script src="node_modules/material-components-web/dist/material-components-web.js"></script>
+    
+  </div>
+</div>
+              <p>
+        Button position:
+        <label>
+          <input type="radio" name="position" value="top left" checked>
+          Top left
+        </label>
+        <label>
+          <input type="radio" name="position" value="top right">
+          Top right
+        </label>
+        <label>
+          <input type="radio" name="position" value="bottom left">
+          Bottom left
+        </label>
+        <label>
+          <input type="radio" name="position" value="bottom right">
+          Bottom right
+        </label>
+      </p>
+      <p>
+        <label>
+          <input type="checkbox" name="dark">
+          Dark mode
+        </label>
+      </p>
+      <div>
+        <span>Last Selected item: <em id="last-selected">&lt;none selected&gt;</em></span>
+      </div>
+      <div class="demo-content">
+        <div class="mdc-menu-anchor">
+          <button class="toggle">Toggle</button>
+
+          <div class="mdc-simple-menu" style="position: absolute;" tabindex="-1">
+            <ul class="mdc-simple-menu__items mdc-list" role="menu" aria-hidden="true">
+              <li class="mdc-list-item" role="menuitem" tabindex="0">Back</li>
+              <li class="mdc-list-item" role="menuitem" tabindex="0">Forward</li>
+              <li class="mdc-list-item" role="menuitem" tabindex="0">Reload</li>
+              <li class="mdc-list-divider" role="separator"></li>
+
+              <li class="mdc-list-item" role="menuitem" tabindex="0">Save As...</li>
+              <li class="mdc-list-item" role="menuitem" tabindex="0">Print...</li>
+              <li class="mdc-list-item" role="menuitem" tabindex="0">Cast...</li>
+              <li class="mdc-list-item" role="menuitem" tabindex="0">Translate to English</li>
+              <li class="mdc-list-divider" role="separator"></li>
+
+              <li class="mdc-list-item" role="menuitem" tabindex="0">View Page Source</li>
+              <li class="mdc-list-item" role="menuitem" tabindex="0">Inspect</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mdc-card demo-card">
+          <section class="mdc-card__media demo-card__16-9-media"></section>
+          <section class="mdc-card__supporting-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+          </section>
+        </div>
+
+        <div class="mdc-card demo-card demo-card--with-avatar">
+          <section class="mdc-card__primary">
+            <div class="demo-card__avatar"></div>
+            <h1 class="mdc-card__title">Title</h1>
+            <h2 class="mdc-card__subtitle">Subhead</h2>
+          </section>
+          <section class="mdc-card__media demo-card__16-9-media"></section>
+          <section class="mdc-card__supporting-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+          </section>
+          <section class="mdc-card__actions">
+            <button class="mdc-button mdc-button--compact mdc-card__action">Action 1</button>
+            <button class="mdc-button mdc-button--compact mdc-card__action">Action 2</button>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="node_modules/material-components-web/dist/material-components-web.min.js"></script>
     <script>mdc.autoInit()</script>
+     <script>
+      var menuEl = document.querySelector('.mdc-simple-menu');
+      var menu = new mdc.menu.MDCSimpleMenu(menuEl);
+      var toggle = document.querySelector('.toggle');
+      toggle.addEventListener('click', function() {
+        menu.open = !menu.open;
+      });
+
+      var dark = document.querySelector('input[name="dark"]');
+      dark.addEventListener('change', function(evt) {
+        if (evt.target.checked) {
+          menuEl.classList.add('mdc-simple-menu--theme-dark');
+        } else {
+          menuEl.classList.remove('mdc-simple-menu--theme-dark');
+        }
+      });
+
+      var radios = document.querySelectorAll('input[name="position"]');
+      for (var i = 0; i < radios.length; i++) {
+        radios[i].addEventListener('change', function(evt) {
+          if (evt.target.checked) {
+            if (evt.target.value) {
+              var anchor = document.querySelector('.mdc-menu-anchor');
+              anchor.style.removeProperty('top');
+              anchor.style.removeProperty('right');
+              anchor.style.removeProperty('bottom');
+              anchor.style.removeProperty('left');
+
+              var vertical = evt.target.value.split(' ')[0];
+              var horizontal = evt.target.value.split(' ')[1];
+              anchor.style.setProperty(vertical, '0');
+              anchor.style.setProperty(horizontal, '0');
+            }
+          }
+        });
+      }
+
+      var lastSelected = document.getElementById('last-selected');
+      menuEl.addEventListener('MDCSimpleMenu:selected', function(evt) {
+        const detail = evt.detail;
+        lastSelected.textContent = '"' + detail.item.textContent.trim() +
+          '" at index ' + detail.index;
+      });
+    </script>
   </body>
 </html>
